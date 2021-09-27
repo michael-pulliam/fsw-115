@@ -1,0 +1,101 @@
+{
+    "menu":[
+        {
+            "appetizers":[ 
+                {
+                "item1": { 
+                    "name": "Fried Pickles",
+                    "ingredents": ["breading", "Pickles"],
+                    "discription": "Breaded Pickles Deep Fried"
+                },
+                "item2": {
+                    "name": "carrot Sticks",
+                    "ingredents": ["Carrots", "Ranch Dressing"],
+                    "discription": "Carrot Sticks Served With a Side Of Ranch Dressing"
+                },
+                "item3": {
+                    "name": "Chips & Cheese",
+                    "ingredents": ["Tortilla Chips", "Cheese Sauce"],
+                    "discription": "Tortilla Chips Served With a Side of Cheese"
+                }
+            } 
+            ],
+            "coldSandwiches":[
+                {
+                    "item1":{
+                        "name": "Club",
+                        "ingredents":["Turkey", "Ham", "Roast Beef", "Bacon", "Onions", "Tomato", "Lettuce", "Cheese", "Wheat Bread", "Pickles"],
+                        "discription": "A Cold Fresh Club Sandwich Served on Wheat Bread With a Pickle on the Side."
+                    },
+                    "item2": {
+                        "name": "Turkey & Cheese",
+                        "ingredents": ["Turkey", "Cheese", "Onions", "Tomato", "Lettuce", "Wheat Bread", "Pickles"],
+                        "discription": "A Cold Fresh Turkey & Cheese Served on Wheat Bread With a Pickle on the Side."
+                    },
+                    "item3": {
+                        "name": "Veggie Delight",
+                        "ingredents": ["Carrots", "Onions", "Lettuce", "Tomato", "Pickles", "Black Olives", "Wheat Bread"],
+                        "discription": "A Cold Fresh Veggie Delight Served on Wheat Bread."
+                    }
+                } 
+            ],
+            "hotSandwiches":[
+                {
+                    "item1": {
+                        "name": "Philly Cheese",
+                        "ingredents": ["Philly Steak", "Cheese", "Grilled Onions", "Grilled Green Onions", "Wheat Bread", "Pickles"],
+                        "discription": "A Hot Fresh Philly Cheese Steak Sandwich served on Wheat Bread with a Pickle on The Side."
+                    },
+                    "item2": {
+                        "name": "Ruben",
+                        "ingredents": ["Corn Beef", "SauerKraut", "Cheese", "Rye Bread", "Pickles"],
+                        "discription": "A Hot Corn Beef Sandwich served on Rye Bread with a Pickle on the Side."
+                    },
+                    "item3": {
+                        "name": "Ham & Cheese",
+                        "ingredents": ["Ham", "Cheese", "Pickles"],
+                        "discription": "A Hot Ham & Cheese Sandwich Served on Wheat Bread with a Pickle on the Side."
+                    }
+                }
+            ],
+            "desserts": [
+                {
+                    "item1": {
+                        "name": "Chocolate Chip Cookie",
+                        "ingredents":["Chocolate Chips", "Homemade Cookie Dough"],
+                        "discription": "A Fresh Baked everyday Chocolate Chip Cookie."
+                    },
+                    "item2":{
+                        "name": "Sugar Cookie",
+                        "ingredents": ["Sugar Cookie Dough", "Sprinkles"],
+                        "discription": "A Fresh Baked everyday Sweet Sugar Cookie."
+                    },
+                    "item3": {
+                        "name": "Cheese Cake",
+                        "ingredents":["Finest Cheese Cake", "Cherry Topping"],
+                        "discription": "A Fresh Slice of Cheese Cake topped With Cherries"
+                    }
+                }
+            ],
+            "drinks": [
+                {
+                    "item1": {
+                        "name": "Iced Tea",
+                        "ingredents": ["Black Tea", "Sweetner", "Ice"],
+                        "discription": "A Fresh Brewed Daily Sweet Iced Tea."
+                    },
+                    "item2": {
+                        "name": "Soda",
+                        "ingredents": ["Flavoring", "Sugar", "Water"],
+                        "discription": "A Fresh Crisp Soda of Your Choice"
+                    },
+                    "item3":{
+                        "name": "Coffee",
+                        "ingredents": ["Coffee Beans", "Water"],
+                        "discription": "A Hot Fresh made to Order Black Coffee."
+                    }
+                }
+            ]
+        }    
+    ]    
+}   
