@@ -1,0 +1,70 @@
+#body1{
+    background: url("https://www.denofgeek.com/wp-content/uploads/2019/05/pokemon_go_december_community_day.0.jpg?resize=768%2C432") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Press Start 2P';
+}
+#body2{
+    background: url("https://pbblogassets.s3.amazonaws.com/uploads/2018/10/16115808/SPACEKIT_header.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'roboto mono';
+}
+nav{
+    display: flex;
+    align-items: center;
+}
+#iconText{
+    padding-left: 10px;
+    color: aliceblue;
+}
+#iconText2{
+    padding-left: 10px;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    
+}
+#space{
+    display: flex;
+    justify-content: center;
+    color: aqua;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+#btn-1{
+    border-radius: 20px;
+    font-family: 'Press Start 2P';
+    background: linear-gradient(to right, tomato, blue);
+    color: aliceblue;
+}
+#btn-2{
+    border-radius: 20px;
+    border-bottom-style: dotted;
+    font-family: 'roboto mono';
+    padding: 10px;
+}
+#name1{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 100px);
+    text-align: center;
+    font-size: 10px;
+    
+    
+}
+#name2{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 4fr;
+    text-align: center;
+    color: blueviolet;
+}
