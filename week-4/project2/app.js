@@ -30,6 +30,7 @@ axios.get("https://api.le-systeme-solaire.net/rest/bodies/")
         document.querySelector("#name2").appendChild(h1)
     }
 })
+response.data.bodies.forEach()
 
 .catch(error => console.log(error))
 
