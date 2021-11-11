@@ -65,11 +65,14 @@ todoForm.addEventListener('submit', (e) => {
     const checkBox = document.createElement("input")
     checkBox.setAttribute("type", "checkbox")
     const update = {
-        name: todoForm.name.value,
-        description: todoForm.va
+        name: 
+        description:
+        price: 
            
     }
     axios.put("http://api.bryanuniversity.edu/michaelpulliam/list", update)
+    .then(res => getData())
+    .catch(err => console.log(err))
 Object.assign(newTodo, updates)
 
 // Part 4 - DELETE
