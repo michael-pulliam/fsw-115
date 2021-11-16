@@ -1,9 +1,11 @@
 body{
     background-color: orange;
+    background-image: linear-gradient(to bottom right, red, orange, yellow, green);
     border: 6px solid black;
     margin-left: 40px;
     margin-right: 40px;
-    padding-bottom: 1000px;
+    padding-bottom: 100px;
+    font-family: Roboto;
 }
 h1{
     text-align: center;
@@ -22,4 +24,11 @@ h2{
     flex-direction: column;
     align-items: center;
     
+}
+.kanyeQuote{
+    font-weight: bolder;
+    font-style: italic;
+}
+.newTask{
+    text-align: center;
 }

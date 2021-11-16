@@ -5,6 +5,13 @@ var myId = []
 axios.get("http://api.bryanuniversity.edu/michaelpulliam/list")
     .then(result =>{
         result.data.forEach(function(e){
+            var para = document.createElement("p")
+            axios.get("https://api.kanye.rest")
+            .then(joke =>{
+                para.textContent = `Kanye Inspires Us:   "${joke.data.quote}"`
+            })
+            .catch(err => console.log(err))
+
             var myTask = document.createElement("h2")
             var myDesc = document.createElement("h3")
             var myPrice = document.createElement("h3")
@@ -16,6 +23,7 @@ axios.get("http://api.bryanuniversity.edu/michaelpulliam/list")
             myPrice.textContent = `price: ${e.price}`
             myDelete.textContent = "delete"
             myCheck.setAttribute("type", "checkbox")
+            para.setAttribute("class", "kanyeQuote")
             myDiv.setAttribute("class", "newTask")
             myDelete.setAttribute("class", "delete")
             if(e.isComplete == true){
@@ -28,6 +36,7 @@ axios.get("http://api.bryanuniversity.edu/michaelpulliam/list")
             myDiv.appendChild(myPrice)
             myDiv.appendChild(myCheck)
             myDiv.appendChild(myDelete)
+            myDiv.appendChild(para)
 
             myId.push(e._id)
         })
@@ -44,6 +53,12 @@ document.querySelector("#flexContainer").addEventListener("submit", function(e){
         isComplete: false
     })
         .then(result =>{
+            var para = document.createElement("p")
+            axios.get("https://api.kanye.rest")
+            .then(joke =>{
+                para.textContent = `Kanye Inspires Us:   "${joke.data.quote}"`
+            })
+            .catch(err => console.log(err))
             var myTask = document.createElement("h2")
             var myDesc = document.createElement("h3")
             var myPrice = document.createElement("h3")
@@ -57,6 +72,7 @@ document.querySelector("#flexContainer").addEventListener("submit", function(e){
             myCheck.setAttribute("type", "checkbox")
             myDiv.setAttribute("class", "newTask")
             myDelete.setAttribute("class", "delete")
+            para.setAttribute("class", "kanyeQuote")
 
             document.body.appendChild(myDiv)
             myDiv.appendChild(myTask)
@@ -64,7 +80,7 @@ document.querySelector("#flexContainer").addEventListener("submit", function(e){
             myDiv.appendChild(myPrice)
             myDiv.appendChild(myCheck)
             myDiv.appendChild(myDelete)
-
+            myDiv.appendChild(para)
             myId.push(result.data._id)
         })
         .catch(err => console.log(err))
@@ -107,3 +123,9 @@ document.addEventListener("mouseover", function(){
         })
     })
 })
+// Must make use of at least 2 APIs
+// One to handle the CRUD applications (BU To-Do API would be a good place to start).
+// Another one to populate some portion of each todo. It can not be entirely hard-coded. Using any of the APIs you are familiar with is okay but be aware: if you try to use a new one, acquiring a key could take days or weeks.
+// Must use the promise based HTTP client for the browser and node.js, Axios
+// Must be fully styled and responsive
+// Must be fully functional and contain all 4 HTTP methods for RESTful services
