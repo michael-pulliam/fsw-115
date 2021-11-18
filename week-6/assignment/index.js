@@ -1,36 +1,37 @@
-// "https://pokeapi.co/api/v2/pokemon"
 
 async function myFile() {
     try{
         const newConst = [] 
-        const nameUrl = await axios.get("https://pokeapi.co/api/v2/pokemon/") 
+        const nameUrl = await axios.get("https://www.dnd5eapi.co/api/monsters") 
         const result = await nameUrl
         for (i = 0; i < 3; i++) {
-            newConst.push(axios.get(result.data.results[i].url))
+            newConst.push(axios.get(`https://www.dnd5eapi.co${result.data.results[i].url}`))
         }
         Promise.all(newConst)
-            .then(res => {
+            .then(res => {console.log(res)
                     for (i = 0; i < res.length; i++) {
-                        var myMain = document.querySelector("#pokeResults")
-                        var pokeName = document.createElement("h2")
-                        var pokeSprites = document.createElement("img")
+                        var bodyData = document.querySelector("#bodyData")
+                        var monsterName = document.createElement("h1")
+                        var actionLabel = document.createElement("h2")
+                        monsterName.textContent = res[i].data.name
+                        actionLabel.textContent = "legendary Actions"
                         
-                        pokeName.textContent = res[i].data.name
-                        pokeSprites.src = res[i].data.sprites.front_default
-                        
-                        myMain.appendChild(pokeName)
+                        bodyData.appendChild(monsterName)
+                        bodyData.appendChild(actionLabel)
                         
                     
-                        for (index = 0; index < res[i].data.abilities.length; index++){
-                            var pokeAbilities = document.createElement("h3")
+                        for (index = 0; index < res[i].data.actions.length; index++){
+                            var actions = document.createElement("h3")
+                            var actionsDesc = document.createElement("h3")
                             
-                            pokeAbilities.textContent = res[i].data.abilities[index].ability.name
-                            
-                            myMain.appendChild(pokeAbilities)
+                            actions.textContent = res[i].data.actions[index].name
+                            actionsDesc.textContent = res[i].data.actions[index].desc
+                            bodyData.appendChild(actions)
+                            bodyData.appendChild(actionsDesc)
                         }
                         
-                        myMain.appendChild(pokeSprites)
-                    }      
+                        
+                     }      
                 
             })
             .catch(err => console.log(err))
